@@ -1,0 +1,17 @@
+name: Hello Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  say-hello:
+    runs-on: macos-latest
+    steps:
+      - name: Say hello
+        run: echo "hello"
